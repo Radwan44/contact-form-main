@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title> Contact form </title>
+  <link rel="stylesheet" href="D:\Projects\by_me\contact-form-main\css\index.css">
+  <link rel="stylesheet" href="D:\Projects\by_me\contact-form-main\css\all.min.css">
+</head>
+<body>
+  <div id="messageSent">
+    <p id="title"> <i class="fa-regular fa-circle-check"></i> Message Sent! </p>
+    <p id="thanksForCompleting"> Thanks for completing the form. We'll be in touch soon! </p>
+  </div>
+  <div class="container">
+
+    <h1> Contact Us </h1>
+
+    <!-- start container input -->
+    <div class="container_input">
+
+
+      <div class="container_name">
+
+        <div class="box" id="box_of_first_name">
+          <label for=""> first name <span class="sympol_field_is_necessary"> * </span> </label>
+          <input type="text" id="inputFirstName" value="e">
+        </div>
+
+        <div class="box" id="box_of_last_name">
+          <label for=""> last name <span class="sympol_field_is_necessary"> * </span> </label>
+          <input type="text" id="inputLastName" value="e">
+        </div>
+
+      </div>
+
+      <div class="box" id="box_of_email">
+        <label for=""> email address <span class="sympol_field_is_necessary"> * </span> </label>
+        <input type="text" id="inputEmailAdress" value="ee@d.l">
+      </div>
+      
+      <div id="container_query">
+        <label for=""> query type <span class="sympol_field_is_necessary"> * </span> </label>
+        <div class="container_boxes_query">
+          <div class="box">
+            <div class="containerInputCheckAndSelect">
+              <input type="radio" name="select Query" id="generally_enquiry" checked>
+              <span class="circel_check"></span>
+            </div> 
+            <label for="generally_enquiry"> generally enquiry</label>
+          </div>
+          <div  class="box">
+            <div class="containerInputCheckAndSelect">
+              <input type="radio" name="select Query" id="support_request">
+              <span class="circel_check"></span>
+            </div>
+            <label for="support_request"> support request </label>
+          </div>
+        </div> 
+        
+      </div>
+      
+      <div class="box" id="box_of_textarea">
+        <label for=""> Message <span class="sympol_field_is_necessary"> * </span> </label>
+        <textarea name="" id="inputTextarea" >value="e"</textarea>
+      </div>
+    </div>
+    <!-- end container input -->
+
+    <div class="agreement" id="box_of_agreement">
+      <label for=""> 
+        <div class="containerInputCheckAndSelect">
+          <input type="checkbox" id="inputagreement">
+          <i class="fa-solid fa-check" id="fa_ckeck"></i>
+        </div>
+        <span>I consent to being contacted by the team </span>
+      </label>
+    </div>
+    <button id="submitform"> Submit </button>
+  </div>
+  <!-- end agreemnt and submit -->
+   <script src="D:\Projects\by_me\contact-form-main\main.js"></script>
+</body>
