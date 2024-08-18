@@ -1,0 +1,212 @@
+    /* start global */
+    * {
+        margin: 0;
+        box-sizing: border-box;
+      }
+      body {
+        /* لما عبحط غريد هون عبتصير العناصر كلها تحت بعض */
+        /* display: grid; */
+        background-color: #e0f1e7;
+        font-family: "Karla", sans-serif;
+      }
+      .container {
+        display: grid;
+        gap: 45px;
+        position: relative;
+        max-width: 741px;
+        background-color: #ffffff;
+        padding: 45px;
+        margin: 34px 17px;
+        border-radius: var(--main-border-radius);
+        margin-left: auto;
+        margin-right: auto;
+      }
+      /* end global */
+       
+      /* start variables */
+      :root {
+        --main-border-color: #949d9a;
+        --border-color-for-error: hsl(0, 66%, 54%);
+        --seconday-color: #077663;
+        --main-border-radius: 11px;
+      }
+      /* end variables */
+      
+      /* start component */
+      .box {
+        display: flex;
+        flex-direction: column;
+      }
+      input[type="text"] {
+        min-width: 260px;
+      }
+      label {
+        margin-block: 9px;
+        font-size: 16px;
+      }
+      .sympol_field_is_necessary {
+        font-size: 15px;
+        margin-left: 9px;
+        color: hsl(169, 82%, 27%);
+      }
+      input, #container_query .box {
+        border: 1px solid var(--main-border-color);
+        padding-block: 16px;
+        padding-left: 26px;
+        border-radius: var(--main-border-radius);
+      }
+      input[type = "text"]:focus, textarea:focus {
+        border: none;
+        outline:  1px solid #306d5d;
+        caret-color: #306d5d;
+      }
+      .container_input {
+        display: grid;
+        gap: 11px;
+      }
+      .container_boxes_query, .container_name {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(260px,1fr));
+        gap: 17px;
+      }
+      .containerInputCheckAndSelect {
+        position: relative;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+      /* end component */
+      
+      /* start message sent */
+      #messageSent {
+        display: none;
+        justify-self: center;
+        position: absolute;
+        left: calc(50% - 448.59px/2);
+        background-color: #2a4244;
+        color: #ffffff;
+        padding: 29px 24px;
+        min-width: 375.2px;
+        border-radius: var(--main-border-radius);
+        z-index: 1;
+      }
+      #messageSent #title {
+        font-size: 25px;
+        font-weight: 700;
+        margin-bottom: 20px;
+      }
+      #messageSent #title i {
+        margin-right: 4px;
+      }
+      /* end message sent */
+
+      /* start container query */
+      #container_query {
+        display: flex;
+        flex-direction: column;
+      }
+      #container_query .box {
+        flex-direction: row;
+        align-items: center;
+        transition: all 0.1s linear, border 4s linear;
+      }
+      #container_query input {
+        height: 21px;
+        width: 21px;
+        appearance: none;
+        padding: 0;
+      }
+      .container_boxes_query .box input:checked {
+        border: var(--seconday-color) solid 1px;
+      }
+      .container_boxes_query .box input:checked ~ .circel_check {
+        display: block;
+      } 
+      .container_boxes_query .box .circel_check {
+        display: none;
+        position: absolute;
+        height: 13.3px;
+        width: 13.3px;
+        background-color: var(--seconday-color);
+        border-radius: 50%;
+      }
+       #selected {
+        background-color: #e0f1e7;
+        outline: 1px solid #306d5d;
+        
+      }
+      #container_query .box label {
+        margin-left: 12px;
+      }
+      /* end container query */
+      
+      /* start textarea */
+      textarea {
+        height: 240px;
+        resize: none;
+        padding: 16px;
+        border-radius: 11px;
+    
+      }
+      @media( width > 638px) {
+        input[type = "textarea"] {
+        height: 70px;
+       }
+      }
+      /* end textarea */
+    
+      /* start agreemnt and submit */
+      #box_of_agreement .check {
+        display: flex;
+        align-items: center;
+      }
+      #box_of_agreement label {
+        display: flex;
+        align-items: center;
+        margin-left: 0;
+      }
+      #inputagreement {
+        height: 22px;
+        width: 22px;
+        appearance: none;
+        padding: 0; border-radius: 0; margin: 0;
+        border-radius: 4px;
+        background-color: #ffffff;
+      }
+      #inputagreement.onclick {
+        background-color: var(--seconday-color);
+      }
+      /* #inputagreement:checked ~ i {
+        display: block;
+      } */
+      #box_of_agreement i {
+        display: none;
+        position: absolute;
+        color: #ffffff;
+        font-size: 14px;
+      }
+      #box_of_agreement label span {
+        margin-left: 12px;
+      }
+      #submitform {
+        background-color: #0c7d69;
+        color: #ffffff;
+        padding: 21px;
+        border: none;
+        font-size: 18px;
+        font-weight: 700;
+        cursor: pointer;
+      }
+      #submitform:hover {
+        background-color: #063f36;
+      }
+      /* end agreemnt and submit */
+    
+      /* start style error message */
+      .errorMessage {
+        color: var(--border-color-for-error);
+        margin-top: 12px;
+        margin-bottom: 30px;
+        }
+      /* end style error message */
+    
